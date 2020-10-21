@@ -1,3 +1,7 @@
+// <copyright file="CustomerFormatProviderTests.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace U07_Fundamentals_Tests
 {
     using System;

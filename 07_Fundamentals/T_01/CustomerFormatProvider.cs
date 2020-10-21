@@ -1,3 +1,7 @@
+// <copyright file="CustomerFormatProvider.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 #nullable enable
 namespace U07_Fundamentals
 {
@@ -16,12 +20,16 @@ namespace U07_Fundamentals
 
         public CustomerFormatProvider(IFormatProvider parent)
         {
-            _parent = parent;
+            this._parent = parent;
         }
 
         public object? GetFormat(Type? formatType)
         {
-            if (formatType == typeof(ICustomFormatter)) return this;
+            if (formatType == typeof(ICustomFormatter))
+            {
+                return this;
+            }
+
             return null;
         }
 
@@ -58,7 +66,10 @@ namespace U07_Fundamentals
                 }
 
                 if (i == format.Length - 1)
+                {
                     break;
+                }
+
                 retstr += ", ";
             }
 

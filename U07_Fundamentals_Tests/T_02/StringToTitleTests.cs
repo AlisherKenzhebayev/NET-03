@@ -1,3 +1,7 @@
+// <copyright file="StringToTitleTests.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace U07_Fundamentals_Tests.T_02
 {
     using NUnit.Framework;
@@ -11,7 +15,6 @@ namespace U07_Fundamentals_Tests.T_02
         public void SetUp()
         {
         }
-
 
         [TestCase("THE WIND IN THE WILLOWS", "The In", "The Wind in the Willows")]
         [TestCase("a clash of KINGS", "a an the of", "A Clash of Kings")]
