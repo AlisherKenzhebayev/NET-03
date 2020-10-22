@@ -1,4 +1,4 @@
-﻿// <copyright file="AddOrChangeUrlParameter.cs" company="PlaceholderCompany">
+﻿// <copyright file="UrlUtility.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -35,7 +35,8 @@ namespace U07_Fundamentals.T_03
                     splitUrl.Add(RetFromTuple(searchKey));
                 }
             }
-            else {
+            else
+            {
                 splitUrl = new List<string>();
                 splitUrl.Add(RetFromTuple(searchKey));
             }

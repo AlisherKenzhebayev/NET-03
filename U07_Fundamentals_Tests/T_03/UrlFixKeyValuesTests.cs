@@ -1,4 +1,8 @@
-﻿namespace U07_Fundamentals_Tests.T_03
+﻿// <copyright file="UrlFixKeyValuesTests.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace U07_Fundamentals_Tests.T_03
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +11,7 @@
     using U07_Fundamentals.T_03;
 
     [TestFixture]
-    class UrlFixKeyValues
+    public class UrlFixKeyValuesTests
     {
         [SetUp]
         public void SetUp()
