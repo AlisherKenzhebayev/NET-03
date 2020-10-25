@@ -1,7 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cddc90c0_002D3a3b_002D4a9b_002D8c3e_002Dd4c7e833aeed/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CustomerFormatProvider_Test_NRC" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::20DD73BC-638B-40EC-877D-77F3ADB2847A::.NETCoreApp,Version=v3.1::U07_Fundamentals_Tests.T_02.StringToTitleTests.StringToTitleCase_Test_Not_Full_Correct("the quick brown fox","The Quick Brown Fox")&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::20DD73BC-638B-40EC-877D-77F3ADB2847A::.NETCoreApp,Version=v3.1::U07_Fundamentals_Tests.T_02.StringToTitleTests.StringToTitleCase_Test_Not_Full_Correct&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8243db75_002De3ce_002D43f9_002Da58e_002D21ea3d790770/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
