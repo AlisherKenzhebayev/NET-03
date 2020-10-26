@@ -8,7 +8,7 @@ namespace U09_DelegatesEvents.T_03
 
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var manager = new CountdownManager();
             var listener = new Listener1(manager);

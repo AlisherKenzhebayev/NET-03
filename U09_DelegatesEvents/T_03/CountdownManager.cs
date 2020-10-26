@@ -1,4 +1,4 @@
-﻿// <copyright file="Countdown.cs" company="PlaceholderCompany">
+﻿// <copyright file="CountdownManager.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 

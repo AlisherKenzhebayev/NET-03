@@ -1,11 +1,12 @@
-using System.Text;
-using System.Xml;
+// <copyright file="SumUtility.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace U07_Fundamentals.T_06
 {
     using System;
     using System.Linq;
-    using System.Security;
+    using System.Text;
 
     public static class SumUtility
     {
@@ -24,7 +25,11 @@ namespace U07_Fundamentals.T_06
             var reserve = 0;
             do
             {
-                if (!char.IsDigit(firste.Current)) continue;
+                if (!char.IsDigit(firste.Current))
+                {
+                    continue;
+                }
+
                 var sum = (firste.Current - '0') + (char.IsDigit(seconde.Current) ? (seconde.Current - '0') : 0) + reserve;
                 reserve = sum / 10;
                 sum %= 10;

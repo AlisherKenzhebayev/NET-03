@@ -16,11 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "U09_DelegatesEvents", "U09_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "U09_DelegatesEvents_Tests", "U09_DelegatesEventsTests\U09_DelegatesEvents_Tests.csproj", "{5F47DF75-D0F8-4A07-A3D8-6100F4926208}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "U10_GenericsCollections", "U10_GenericsCollections", "{C9010ECC-16BA-4DDD-9066-CA12CF916443}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "U10_GenericsCollections_Tests", "Tests\U10_GenericsCollections_Tests.csproj", "{2055EF14-339F-4623-9FB0-7B2816625C2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{2055EF14-339F-4623-9FB0-7B2816625C2C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Source", "Source\Source.csproj", "{F5B2F9C0-1398-4D1C-AA93-B83991BEEDF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "U10_GenericsCollections", "Source\U10_GenericsCollections.csproj", "{F5B2F9C0-1398-4D1C-AA93-B83991BEEDF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,9 +56,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F7EE66A-A016-418B-88B6-83EF4283A653}
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{2055EF14-339F-4623-9FB0-7B2816625C2C} = {C9010ECC-16BA-4DDD-9066-CA12CF916443}
-		{F5B2F9C0-1398-4D1C-AA93-B83991BEEDF6} = {C9010ECC-16BA-4DDD-9066-CA12CF916443}
 	EndGlobalSection
 EndGlobal

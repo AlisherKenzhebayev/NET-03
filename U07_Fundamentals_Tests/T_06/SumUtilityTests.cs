@@ -1,3 +1,7 @@
+// <copyright file="SumUtilityTests.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace U07_Fundamentals_Tests.T_06
 {
     using NUnit.Framework;

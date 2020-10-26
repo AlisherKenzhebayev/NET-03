@@ -1,4 +1,4 @@
-﻿// <copyright file="Message.cs" company="PlaceholderCompany">
+﻿// <copyright file="MessageEventArgs.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
