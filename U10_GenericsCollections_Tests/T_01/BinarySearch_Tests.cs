@@ -1,10 +1,10 @@
-namespace U10_GenericCollections.Tests.T_01
+namespace U10_GenericsCollections_Tests.T_01
 {
     using NUnit.Framework;
-    using U10_GenericCollections.Source.T_01;
+    using U10_GenericsCollections.T_01;
 
     [TestFixture]
-    public class BinarySearch_Tests
+    public class BinarySearchTests
     {
         [SetUp]
         public void Setup()

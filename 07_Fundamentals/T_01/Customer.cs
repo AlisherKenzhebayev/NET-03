@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace U07_Fundamentals
+namespace U07_Fundamentals.T_01
 {
     public class Customer
     {

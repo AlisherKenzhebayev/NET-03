@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Source\U10_GenericsCollections.csproj" />
+      <ProjectReference Include="..\U10_GenericsCollections\U10_GenericsCollections.csproj" />
     </ItemGroup>
 
 </Project>

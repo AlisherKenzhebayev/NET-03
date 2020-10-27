@@ -3,7 +3,7 @@
 // </copyright>
 
 #nullable enable
-namespace U07_Fundamentals
+namespace U07_Fundamentals.T_01
 {
     using System;
     using System.Globalization;

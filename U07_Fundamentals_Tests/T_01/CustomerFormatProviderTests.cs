@@ -2,11 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace U07_Fundamentals_Tests
+namespace U07_Fundamentals_Tests.T_01
 {
     using System;
     using NUnit.Framework;
-    using U07_Fundamentals;
+    using U07_Fundamentals.T_01;
 
     [TestFixture]
     public class CustomerFormatProviderTests

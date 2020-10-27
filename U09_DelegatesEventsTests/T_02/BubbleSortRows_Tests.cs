@@ -4,14 +4,13 @@
 
 namespace U09_DelegatesEvents_Tests.T_02
 {
-    using System.Collections.Generic;
     using NUnit.Framework;
     using U09_DelegatesEvents.T_02;
     using U09_DelegatesEvents.T_02.IComparer;
 
     // TODO: jagged Array
     [TestFixture]
-    public class BubbleSortRows_Tests
+    public class BubbleSortRowsTests
     {
         private RowsComparer comparer;
 
@@ -26,16 +25,16 @@ namespace U09_DelegatesEvents_Tests.T_02
         {
             int[][] array =
             {
-                new int[] { 7, 8, 9 },
-                new int[] { 4, 5, 6 },
-                new int[] { 1, 2, 3 },
+                new[] { 7, 8, 9 },
+                new[] { 4, 5, 6 },
+                new[] { 1, 2, 3 },
             };
 
             int[][] expected =
             {
-                new int[] { 1, 2, 3 },
-                new int[] { 4, 5, 6 },
-                new int[] { 7, 8, 9 },
+                new[] { 1, 2, 3 },
+                new[] { 4, 5, 6 },
+                new[] { 7, 8, 9 },
             };
 
             this.comparer.SortUsingBubble(array, new SortDelegate(Helpers.HelperMaxElements), Modes.Ascending);
@@ -48,16 +47,16 @@ namespace U09_DelegatesEvents_Tests.T_02
         {
             int[][] array =
             {
-                new int[] { 1, 2, 3 },
-                new int[] { 4, 5, 6 },
-                new int[] { 7, 8, 9 },
+                new[] { 1, 2, 3 },
+                new[] { 4, 5, 6 },
+                new[] { 7, 8, 9 },
             };
 
             int[][] expected =
             {
-                new int[] { 7, 8, 9 },
-                new int[] { 4, 5, 6 },
-                new int[] { 1, 2, 3 },
+                new[] { 7, 8, 9 },
+                new[] { 4, 5, 6 },
+                new[] { 1, 2, 3 },
             };
 
             this.comparer.SortUsingBubble(array, new SortDelegate(Helpers.HelperMaxElements), Modes.Descending);
@@ -70,16 +69,16 @@ namespace U09_DelegatesEvents_Tests.T_02
         {
             int[][] array =
             {
-                new int[] { 7, 8, 9 },
-                new int[] { 4, 5, 6 },
-                new int[] { 1, 2, 3 },
+                new[] { 7, 8, 9 },
+                new[] { 4, 5, 6 },
+                new[] { 1, 2, 3 },
             };
 
             int[][] expected =
             {
-                new int[] { 1, 2, 3 },
-                new int[] { 4, 5, 6 },
-                new int[] { 7, 8, 9 },
+                new[] { 1, 2, 3 },
+                new[] { 4, 5, 6 },
+                new[] { 7, 8, 9 },
             };
 
             this.comparer.SortUsingBubble(array, new SortDelegate(Helpers.HelperMinElements), Modes.Ascending);
@@ -92,16 +91,16 @@ namespace U09_DelegatesEvents_Tests.T_02
         {
             int[][] array =
             {
-                new int[] { 1, 2, 3 },
-                new int[] { 4, 5, 6 },
-                new int[] { 7, 8, 9 },
+                new[] { 1, 2, 3 },
+                new[] { 4, 5, 6 },
+                new[] { 7, 8, 9 },
             };
 
             int[][] expected =
             {
-                new int[] { 7, 8, 9 },
-                new int[] { 4, 5, 6 },
-                new int[] { 1, 2, 3 },
+                new[] { 7, 8, 9 },
+                new[] { 4, 5, 6 },
+                new[] { 1, 2, 3 },
             };
 
             this.comparer.SortUsingBubble(array, new SortDelegate(Helpers.HelperMinElements), Modes.Descending);
@@ -115,16 +114,16 @@ namespace U09_DelegatesEvents_Tests.T_02
         {
             int[][] array =
             {
-                new int[] { 7, 8, 9 },
-                new int[] { 4, 5, 6 },
-                new int[] { 1, 2, 3 },
+                new[] { 7, 8, 9 },
+                new[] { 4, 5, 6 },
+                new[] { 1, 2, 3 },
             };
 
             int[][] expected =
             {
-                new int[] { 1, 2, 3 },
-                new int[] { 4, 5, 6 },
-                new int[] { 7, 8, 9 },
+                new[] { 1, 2, 3 },
+                new[] { 4, 5, 6 },
+                new[] { 7, 8, 9 },
             };
 
             this.comparer.SortUsingBubble(array, new SortDelegate(Helpers.HelperSumElements), Modes.Ascending);
@@ -137,16 +136,16 @@ namespace U09_DelegatesEvents_Tests.T_02
         {
             int[][] array =
             {
-                new int[] { 1, 2, 3 },
-                new int[] { 4, 5, 6, 10 },
-                new int[] { 7, 8, 9 },
+                new[] { 1, 2, 3 },
+                new[] { 4, 5, 6, 10 },
+                new[] { 7, 8, 9 },
             };
 
             int[][] expected =
             {
-                new int[] { 4, 5, 6, 10 },
-                new int[] { 7, 8, 9 },
-                new int[] { 1, 2, 3 },
+                new[] { 4, 5, 6, 10 },
+                new[] { 7, 8, 9 },
+                new[] { 1, 2, 3 },
             };
 
             this.comparer.SortUsingBubble(array, (Helpers.HelperSumElements), Modes.Descending);

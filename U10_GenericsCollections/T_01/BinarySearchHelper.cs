@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace U10_GenericCollections.Source.T_01
+namespace U10_GenericsCollections.T_01
 {
     using System;
     using System.Collections.Generic;
