@@ -11,8 +11,4 @@
       </PackageReference>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="T_05" />
-    </ItemGroup>
-
 </Project>
