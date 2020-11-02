@@ -5,7 +5,7 @@
 
         <IsPackable>false</IsPackable>
 
-        <RootNamespace>Source</RootNamespace>
+        <RootNamespace>U10_GenericsCollections_Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
