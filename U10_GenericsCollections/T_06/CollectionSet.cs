@@ -1,92 +1,67 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Runtime.CompilerServices;
+// <copyright file="CollectionSet.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace U10_GenericsCollections.T_06
 {
-    public class CollectionSet<T> : IEnumerable<T>, IEnumerator<T>, ICollection<T>
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.ComponentModel.Design;
+    using System.Linq;
+    using System.Runtime.CompilerServices;
+
+    public class CollectionSet<T> : IEnumerable<T>
     {
-        private CollectionSet()
+        public CollectionSet()
         {
-            Set = new List<T>();
-            Iterator = -1;
+            this.Set = new List<T>();
         }
 
-        public int Count => Set.Count();
+        public int Count => this.Set.Count();
 
-        public bool IsReadOnly => Set.IsReadOnly;
+        public bool IsReadOnly => this.Set.IsReadOnly;
 
         private IList<T> Set { get; set; }
 
-        private int Iterator { get; set; }
-
         public IEnumerator<T> GetEnumerator()
         {
-            return Set.GetEnumerator();
+            for (var i = 0; i < this.Set.Count; i++)
+            {
+                yield return this.Set[i];
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return GetEnumerator();
-        }
-
-        public bool MoveNext()
-        {
-            var updatedPosition = Iterator + 1;
-
-            if (updatedPosition >= 0 && updatedPosition < Set.Count)
-            {
-                Iterator = updatedPosition;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public void Reset()
-        {
-            Iterator = 0;
-        }
-
-        public T Current { get; }
-
-        object? IEnumerator.Current => Current;
-
-        public void Dispose()
-        {
-            throw new System.NotImplementedException();
+            return this.GetEnumerator();
         }
 
         public void Add(T item)
         {
             if (!this.Contains(item))
             {
-                Set.Add(item);
+                this.Set.Add(item);
             }
         }
 
         public void Clear()
         {
-            Set.Clear();
+            this.Set.Clear();
         }
 
         public bool Contains(T item)
         {
-            return Set.Contains(item);
+            return this.Set.Contains(item);
         }
 
         public void CopyTo(T[] array, int arrayIndex)
         {
-            Set.CopyTo(array, arrayIndex);
+            this.Set.CopyTo(array, arrayIndex);
         }
 
         public bool Remove(T item)
         {
-            return Set.Remove(item);
+            return this.Set.Remove(item);
         }
     }
 }

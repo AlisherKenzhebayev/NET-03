@@ -1,3 +1,7 @@
+// <copyright file="CollectionStack.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace U10_GenericsCollections.T_05
 {
     using System;
@@ -9,34 +13,37 @@ namespace U10_GenericsCollections.T_05
     {
         public CollectionStack()
         {
-            Stack = new List<T>();
+            this.Stack = new List<T>();
         }
 
-        public int Count => Stack.Count;
+        public int Count => this.Stack.Count;
 
         private IList<T> Stack { get; set; }
 
         public void Push(T item)
         {
-            Stack.Add(item);
+            this.Stack.Add(item);
         }
 
         public bool IsEmpty()
         {
-            return !Stack.Any();
+            return !this.Stack.Any();
         }
 
         public IList<T> GetItems()
         {
-            return Stack;
+            return this.Stack;
         }
 
         public T Pop()
         {
-            if (this.IsEmpty()) throw new Exception("Stack is empty");
+            if (this.IsEmpty())
+            {
+                throw new Exception("Stack is empty");
+            }
 
-            var v = Stack.Last();
-            Stack.Remove(v);
+            var v = this.Stack.Last();
+            this.Stack.Remove(v);
             return v;
         }
 

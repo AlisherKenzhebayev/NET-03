@@ -11,7 +11,8 @@ namespace U10_GenericsCollections.T_03
 
     public static class FibonacciHelper
     {
-        public static IEnumerable<int> Fibonacci(int n) {
+        public static IEnumerable<int> Fibonacci(int n)
+        {
             var v1 = 1;
             var v2 = 1;
             while (true)

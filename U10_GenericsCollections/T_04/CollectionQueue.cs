@@ -1,3 +1,7 @@
+// <copyright file="CollectionQueue.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace U10_GenericsCollections.T_04
 {
     using System;
@@ -10,36 +14,39 @@ namespace U10_GenericsCollections.T_04
     {
         public CollectionQueue()
         {
-            Queue = new List<T>();
+            this.Queue = new List<T>();
         }
+
+        public int Count => this.Queue.Count;
 
         private IList<T> Queue { get; set; }
 
-        public int Count => Queue.Count;
-
         public void Enqueue(T item)
         {
-            Queue.Add(item);
+            this.Queue.Add(item);
         }
 
         public bool IsEmpty()
         {
-            return !Queue.Any();
+            return !this.Queue.Any();
         }
 
         public IList<T> GetItems()
         {
-            return Queue;
+            return this.Queue;
         }
 
         public T Dequeue()
         {
-            if (this.IsEmpty()) throw new Exception("Queue is empty");
+            if (this.IsEmpty())
+            {
+                throw new Exception("Queue is empty");
+            }
 
-            var v = Queue.GetEnumerator();
+            var v = this.Queue.GetEnumerator();
             v.MoveNext();
             var t = v.Current;
-            Queue.Remove(t);
+            this.Queue.Remove(t);
             v.Dispose();
             return t;
         }

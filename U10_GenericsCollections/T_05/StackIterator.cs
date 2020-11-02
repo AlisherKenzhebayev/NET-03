@@ -1,3 +1,7 @@
+// <copyright file="StackIterator.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace U10_GenericsCollections.T_05
 {
     public class StackIterator<T> : Iterator<T>
@@ -7,7 +11,7 @@ namespace U10_GenericsCollections.T_05
 
         public StackIterator(CollectionStack<T> collection)
         {
-            _collection = collection;
+            this._collection = collection;
         }
 
         public override bool MoveNext()
@@ -32,7 +36,7 @@ namespace U10_GenericsCollections.T_05
 
         public override T Current()
         {
-            return this._collection.GetItems()[_position];
+            return this._collection.GetItems()[this._position];
         }
     }
 }
