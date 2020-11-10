@@ -1,12 +1,12 @@
-﻿// <copyright file="BSTNode.cs" company="PlaceholderCompany">
+﻿// <copyright file="BstNode.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace U10_GenericsCollections.T_07
 {
-    public class BSTNode<T>
+    public class BstNode<T>
     {
-        public BSTNode(T root)
+        public BstNode(T root)
         {
             this.TValue = root;
         }

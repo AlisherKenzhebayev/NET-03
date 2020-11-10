@@ -1,4 +1,4 @@
-﻿// <copyright file="SimpleBST.cs" company="PlaceholderCompany">
+﻿// <copyright file="SimpleBst.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -8,10 +8,10 @@ namespace U10_GenericsCollections.T_07
     using System.Collections;
     using System.Collections.Generic;
 
-    public class SimpleBST<T>
+    public class SimpleBst<T> : IEnumerable<T>
         where T : IComparable<T>
     {
-        public SimpleBST(T[] input)
+        public SimpleBst(T[] input)
         {
             foreach (var item in input)
             {
@@ -19,7 +19,7 @@ namespace U10_GenericsCollections.T_07
             }
         }
 
-        public SimpleBST()
+        public SimpleBst()
         {
             this.Node = null;
             this.Left ??= null;
@@ -27,27 +27,27 @@ namespace U10_GenericsCollections.T_07
             this.Enumerator = this.TransverseOrder;
         }
 
-        public SimpleBST(T root)
+        public SimpleBst(T root)
         {
-            this.Node = new BSTNode<T>(root);
+            this.Node = new BstNode<T>(root);
             this.Left ??= null;
             this.Right ??= null;
             this.Enumerator = this.TransverseOrder;
         }
 
-        public delegate IEnumerator<T> BSTEnumerator();
+        public delegate IEnumerator<T> BstEnumerator();
 
-        public BSTEnumerator Enumerator { get; set; }
+        public BstEnumerator Enumerator { get; set; }
 
-        public SimpleBST<T> Left { get; private set; }
+        public SimpleBst<T> Left { get; private set; }
 
-        public BSTNode<T> Node { get; private set; }
+        public BstNode<T> Node { get; private set; }
 
-        public SimpleBST<T> Right { get; private set; }
+        public SimpleBst<T> Right { get; private set; }
 
         public IComparer<T> Comparer { get; set; }
 
-        public SimpleBST<T> Find(T search)
+        public SimpleBst<T> Find(T search)
         {
             return this.Search(search);
         }
@@ -151,11 +151,16 @@ namespace U10_GenericsCollections.T_07
             return retStr;
         }
 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
         private bool Insert(T item)
         {
             if (this.Node is null)
             {
-                this.Node = new BSTNode<T>(item);
+                this.Node = new BstNode<T>(item);
                 return true;
             }
             else
@@ -165,7 +170,7 @@ namespace U10_GenericsCollections.T_07
                 {
                     if (this.Right is null)
                     {
-                        this.Right = new SimpleBST<T>(item);
+                        this.Right = new SimpleBst<T>(item);
                         return true;
                     }
 
@@ -174,7 +179,7 @@ namespace U10_GenericsCollections.T_07
 
                 if (this.Left is null)
                 {
-                    this.Left = new SimpleBST<T>(item);
+                    this.Left = new SimpleBst<T>(item);
                     return true;
                 }
 
@@ -182,7 +187,7 @@ namespace U10_GenericsCollections.T_07
             }
         }
 
-        private SimpleBST<T> Search(T search)
+        private SimpleBst<T> Search(T search)
         {
             if (this.Node is null)
             {
@@ -224,7 +229,7 @@ namespace U10_GenericsCollections.T_07
                 return false;
             }
 
-            SimpleBST<T> t = this.CopyToNoRoot(f);
+            SimpleBst<T> t = this.CopyToNoRoot(f);
 
             f.Node = null;
             f.Right = null;
@@ -252,9 +257,9 @@ namespace U10_GenericsCollections.T_07
             }
         }
 
-        private SimpleBST<T> CopyToNoRoot(SimpleBST<T> oldBST)
+        private SimpleBst<T> CopyToNoRoot(SimpleBst<T> oldBST)
         {
-            SimpleBST<T> newBST = null;
+            SimpleBst<T> newBST = null;
             foreach (var item in oldBST)
             {
                 if (item.Equals(oldBST.Node.TValue))
@@ -264,7 +269,7 @@ namespace U10_GenericsCollections.T_07
 
                 if (newBST == null)
                 {
-                    newBST = new SimpleBST<T>(item);
+                    newBST = new SimpleBst<T>(item);
                     continue;
                 }
 

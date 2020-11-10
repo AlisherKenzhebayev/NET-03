@@ -16,7 +16,7 @@
 
         [Test]
         public void BstCreating_Test_Transverse() {
-            var bst = new SimpleBST<int>(6);
+            var bst = new SimpleBst<int>(6);
             for (int i = 0; i < 10; i++)
             {
                 bst.Add(i);
@@ -39,7 +39,7 @@
         [Test]
         public void BstCreating_Test_Direct()
         {
-            var bst = new SimpleBST<int>(6);
+            var bst = new SimpleBst<int>(6);
             bst.Enumerator = bst.DirectOrder;
             for (int i = 0; i < 10; i++)
             {
@@ -52,7 +52,7 @@
         [Test]
         public void BstCreating_Test_Reverse()
         {
-            var bst = new SimpleBST<int>(6);
+            var bst = new SimpleBst<int>(6);
             bst.Enumerator = bst.ReverseOrder;
             for (int i = 0; i < 10; i++)
             {
