@@ -17,6 +17,12 @@ namespace U11_Linq
     {
         private SimpleBst<StudentInfo> myBST;
 
+        public DataLoader()
+        {
+            this.myBST = new SimpleBst<StudentInfo>();
+        }
+
+        // TODO : User-specified sort order.
         // File structure should be like -> st.name, st.exam, st.date, st.score
         public void LoadFile(string filePath)
         {
@@ -38,10 +44,15 @@ namespace U11_Linq
             }
         }
 
-        public IEnumerable<StudentInfo> RequestData(Func<StudentInfo, bool> predicate = null)
+        public IEnumerable<StudentInfo> RequestData(Func<StudentInfo, bool> predicate = null, int? count = null)
         {
             predicate = predicate ?? (t => true);
             var retVal = this.myBST.Where(predicate);
+            if (count != null)
+            {
+                retVal = retVal.Take((int)count);
+            }
+
             return retVal;
         }
     }
