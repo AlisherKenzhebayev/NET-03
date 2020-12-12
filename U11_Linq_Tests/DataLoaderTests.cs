@@ -35,7 +35,7 @@ namespace U11_Linq_Tests
 
             binaryWriter.Write(arrayNames[1]);
             binaryWriter.Write("Chem");
-            binaryWriter.Write("13.08.2020");
+            binaryWriter.Write("13 June 2020");
             binaryWriter.Write("3.5");
             binaryWriter.Close();
             // Use DataLoader to load the created file
